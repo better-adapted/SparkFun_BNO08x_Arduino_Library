@@ -143,7 +143,8 @@ boolean BNO08x::beginSPI(uint8_t user_CSPin, uint8_t user_INTPin, uint8_t user_R
 
 	digitalWrite(_cs, HIGH); //Deselect BNO08x
 
-	_spiPort->begin(); //Turn on SPI hardware
+	//_spiPort->begin(); //Turn on SPI hardware
+	//_spiPort->begin(12,13,11,-1); //Turn on SPI hardware
 
 	_HAL.open = spihal_open;
 	_HAL.close = spihal_close;
